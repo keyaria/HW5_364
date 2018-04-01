@@ -151,7 +151,7 @@ def update(item):
     form = UpdatePriorityForm()
     if form.validate_on_submit():
         new_prio = form.newPriority.data
-      
+        #Comment for additional branch
         p = TodoItem.query.filter_by(description=item).first()
         p.priority = new_prio
         db.session.commit()
